@@ -39,10 +39,21 @@ class BankAccount():
         return self.__balance
 
     # add_interest
+    def add_interest(self):
+        interest = self.__balance *  0.00083
+
     # print_reciet
+    def print_reciet(self):
+        print(f'''
+            {self.full_name}
+            Account No. : {self.account_number}
+            Routing No. : {self.routing_number}
+            Balance:      {self.get_balance()}
+            ''')
 
 my_account = BankAccount( "Alberto")
 
-my_account.deposite(666)
+my_account.deposite(1000)
 # print(my_account.__balance)
 my_account.get_balance()
+my_account.print_reciet()
