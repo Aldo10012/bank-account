@@ -16,16 +16,11 @@ class BankAccount():
         self.routing_number = 987654321
         self.__balance = 0
 
-        
-    
-    # METHODS
 
-    # deposit
     def deposite(self, amount):
         self.__balance += amount
         print(f'Amount deposited: ${amount}')
 
-    # withdraw
     def withdraw(self, amount):
         self.__balance -= amount
         print(f'Amount withdrawed: ${amount}')
@@ -33,27 +28,24 @@ class BankAccount():
             print("Insufficient funds.")
             # and charge them with an overdraft fee of $10?
 
-    # get_balance
     def get_balance(self):
         print(f'Your balance is: ${self.__balance}')
         return self.__balance
 
-    # add_interest
     def add_interest(self):
         interest = self.__balance *  0.00083
+        return interest
 
-    # print_reciet
     def print_reciet(self):
         print(f'''
             {self.full_name}
-            Account No. : {self.account_number}
-            Routing No. : {self.routing_number}
-            Balance:      {self.get_balance()}
+            Account No.: ${self.account_number}
+            Routing No.: ${self.routing_number}
+            Balance:     ${self.get_balance()}
             ''')
 
-my_account = BankAccount( "Alberto")
+my_account = BankAccount("Alberto")
 
 my_account.deposite(1000)
-# print(my_account.__balance)
 my_account.get_balance()
 my_account.print_reciet()
