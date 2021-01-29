@@ -37,9 +37,12 @@ class BankAccount():
         return interest
 
     def print_reciet(self):
+        account_num_str = str(self.account_number)
+        sensitized_account_num = f'****{account_num_str[4]}{account_num_str[5]}{account_num_str[6]}{account_num_str[7]}'
+
         print(f'''
             {self.full_name}
-            Account No.: ${self.account_number}
+            Account No.: ${sensitized_account_num}
             Routing No.: ${self.routing_number}
             Balance:     ${self.get_balance()}
             ''')
@@ -50,13 +53,13 @@ person_1.withdraw(50)
 person_1.get_balance()
 person_1.print_reciet()
 
-person_2 = BankAccount("Thomas Jones")
-person_2.deposite(5000)
-person_2.print_reciet()
+# person_2 = BankAccount("Thomas Jones")
+# person_2.deposite(5000)
+# person_2.print_reciet()
 
 
-person_3 = BankAccount("Alex Chen")
-person_3.deposite(500)
-person_3.withdraw(600)
-person_3.add_interest()
-person_3.print_reciet()
+# person_3 = BankAccount("Alex Chen")
+# person_3.deposite(500)
+# person_3.withdraw(600)
+# person_3.add_interest()
+# person_3.print_reciet()
