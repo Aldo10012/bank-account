@@ -14,7 +14,7 @@ class BankAccount():
         self.full_name = name
         self.account_number = random_8_digit_num(8)
         self.routing_number = 987654321
-        self.balance = 0
+        self.__balance = 0
 
         
     
@@ -22,22 +22,27 @@ class BankAccount():
 
     # deposit
     def deposite(self, amount):
-        self.balance += amount
+        self.__balance += amount
         print(f'Amount deposited: ${amount}')
 
     # withdraw
     def withdraw(self, amount):
-        self.balance -= amount
+        self.__balance -= amount
         print(f'Amount withdrawed: ${amount}')
-        if amount > self.balance:
+        if amount > self.__balance:
             print("Insufficient funds.")
             # and charge them with an overdraft fee of $10?
 
     # get_balance
+    def get_balance(self):
+        print(f'Your balance is: ${self.__balance}')
+        return self.__balance
+
     # add_interest
     # print_reciet
 
 my_account = BankAccount( "Alberto")
 
 my_account.deposite(666)
-print(my_account.balance)
+# print(my_account.__balance)
+my_account.get_balance()
