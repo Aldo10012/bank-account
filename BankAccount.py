@@ -3,7 +3,6 @@ import random
 
 
 class BankAccount():
-    # attributes
     def __init__(self, name):
         # to assign account_number with a random 8-digit number
         def random_8_digit_num(n):
@@ -16,7 +15,7 @@ class BankAccount():
         self.routing_number = 987654321
         self.__balance = 0
 
-
+    # methods
     def deposite(self, amount):
         self.__balance += amount
         print(f'Amount deposited: ${amount}')
@@ -46,6 +45,9 @@ class BankAccount():
             Routing No.: ${self.routing_number}
             Balance:     ${self.get_balance()}
             ''')
+
+
+# Creating instances of BankAccount() class
 
 person_1 = BankAccount("Alberto Dominguez")
 person_1.deposite(200)
