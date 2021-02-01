@@ -48,18 +48,18 @@ class BankAccount():
 
 
 # Creating instances of BankAccount() class
-
 person_1 = BankAccount("Alberto Dominguez")
 person_1.deposite(200)
 person_1.withdraw(50)
 person_1.get_balance()
 person_1.print_reciet()
 
+print("\n=================================================\n")
 person_2 = BankAccount("Thomas Jones")
 person_2.deposite(5000)
 person_2.print_reciet()
 
-
+print("\n=================================================\n")
 person_3 = BankAccount("Alex Chen")
 person_3.deposite(500)
 person_3.withdraw(600)
